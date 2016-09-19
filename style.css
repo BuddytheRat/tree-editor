@@ -1,8 +1,14 @@
+#node-container {
+  background: #cec;
+  height: 85vh;
+}
+
 .node {
   background: #ddf;
   border: 1px solid black;
-  width: 120px;
   height: 80px;
+  position: relative;
+  width: 120px;
 }
 
 .node p {
@@ -26,4 +32,12 @@
 #editor textarea {
   width: 350px;
   height: 20em;
+}
+
+#context-menu {
+  border: 1px solid black;
+  display: none;
+  position: absolute;
+  height: 70px;
+  width: 100px;
 }

@@ -1,6 +1,7 @@
 define(function(require) {
   var events = require('./pubsub.js');
   var Node = require('./node.js');
+  require('./nodemenu.js');
 
   //cache DOM
   var nodes = [];
@@ -16,8 +17,8 @@ define(function(require) {
 
     $c.appendChild(node.elem);
   });
-
-  $form.addEventListener('submit', function save(e) {
+  
+  $form.addEventListener('submit', function(e) {
     $e.style.display = 'none';
     e.preventDefault();
     var new_data = {
