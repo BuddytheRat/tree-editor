@@ -10,7 +10,7 @@ define(['./pubsub.js', 'draggable'], function (events, Draggable) {
     };
     this.editData = editData || {
       index: nodeIndex++,
-      color: '#448',
+      color: '#47a',
       x: 0,
       y: 0
     }
@@ -34,7 +34,7 @@ define(['./pubsub.js', 'draggable'], function (events, Draggable) {
 
     this.elem.appendChild($p);
     this.elem.appendChild($a);
-    
+
     this.setPos = function(pos) {
       this.editData.x = pos.x;
       this.editData.y = pos.y;

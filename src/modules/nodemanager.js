@@ -8,9 +8,7 @@ define(['./pubsub.js', './node.js'], function(events, Node) {
 
   //functions
   function newNode(pos) {
-    console.log(pos);
     var node = new Node();
-    console.log(node);
     node.setPos(pos);
     nodes.push(node);
 
