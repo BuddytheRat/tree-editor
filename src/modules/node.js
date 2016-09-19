@@ -13,7 +13,7 @@ define(['./pubsub.js', 'draggable'], function (events, Draggable) {
       color: '#448',
       x: 0,
       y: 0
-    };
+    }
 
     this.elem = document.createElement('div');
     this.elem.className = 'node';
@@ -34,7 +34,14 @@ define(['./pubsub.js', 'draggable'], function (events, Draggable) {
 
     this.elem.appendChild($p);
     this.elem.appendChild($a);
+    
+    this.setPos = function(pos) {
+      this.editData.x = pos.x;
+      this.editData.y = pos.y;
+      this.drag.set(pos.x, pos.y);
+    }
   }
+
 
   return Node;
 });
