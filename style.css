@@ -45,21 +45,21 @@ h1 {
   height: 20em;
 }
 
-#context-menu {
+#cxm {
   display: none;
   position: absolute;
   background: #fff;
 }
 
-#cm-buttons {
+#cxm-buttons {
     list-style: none;
     text-indent: none;
     padding: 0;
     margin: 0;
 }
 
-#context-menu li a {
-  background: #5be;
+#cxm li a {
+  background: #eb5;
   border-left: 3px solid black;
   display: block;
   color: #000;

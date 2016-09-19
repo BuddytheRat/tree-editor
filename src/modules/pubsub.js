@@ -21,6 +21,10 @@ define([], function() {
           fn(data);
         });
       }
+    },
+    getEventString: function() {
+      var args = Array.prototype.slice.call(arguments);
+      return args.join('.');
     }
   }
   return events;

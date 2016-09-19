@@ -11,13 +11,12 @@
 + Load from JSON file.
 + Add node color option to node editor.
 + Node area should be able to be scrolled when nodes leave screen.
++ Nodes should only drag on right click.
++ Nodes should be drawn below editor window.
 
 ## Context menu
-- 'addMenu' function.
-  - 'addOption' function to add a menu option.
-- 'attach' function to attach a menu to an element and bind it's data.
-- Events should use 'action' prefix for menu button events.
 - Menu should auto-close when mouse gets a certain distance.
+- Menu should auto-close when option is clicked.
 
 ## Pub/Sub
 - Add hierarchical event names.
