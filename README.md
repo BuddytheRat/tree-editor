@@ -1,14 +1,9 @@
-# tree-editor
-## ToDo
-+ ~~Nodes should be draggable.~~
-+ ~~Add functionality to context menu buttons.~~
-+ Save X and Y to editData when node is dropped.
-+ Context Menu different on nodes.
-+ Link nodes to eachother.
-  - Node object should list link objects which contain pointers to other node objects.
-  - Links should be visible via a connecting line.
-  - Links should have own context menu.
-+ Save to JSON file.
-+ Load from JSON file.
-+ Add node color option to node editor.
-+ Node area should be able to be scrolled when nodes leave screen.
+# Tree Editor
+Graphical editor for node charts.
+Nodes can contain any arbitrary data, as well as a list of links to other nodes. Links are represented as lines connecting pairs of nodes.
+
+Nodes can be positioned on screen to organize data. This does not affect the underlying data.
+
+All data can be exported to and from JSON files.
+
+**This is still a work in progress.**
