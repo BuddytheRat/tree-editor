@@ -1,6 +1,17 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #abb;
+  font-family: sans-serif;
+  padding: 0 1em;
+  position: absolute;
+}
 #node-container {
-  background: #cec;
-  height: 85vh;
+  background: #cee;
+  height: 100vh;
 }
 
 .node {
@@ -37,26 +48,24 @@
 #context-menu {
   display: none;
   position: absolute;
+  background: #fff;
 }
 
-#context-menu ul {
+#cm-buttons {
     list-style: none;
+    text-indent: none;
+    padding: 0;
+    margin: 0;
 }
 
 #context-menu li a {
-  background: #bbe;
-  border-radius: 100%;
-  color: #000;
+  background: #5be;
+  border-left: 3px solid black;
   display: block;
-  float: left;
+  color: #000;
   font-family: sans-serif;
-  font-size: 1em;
-  font-weight: bold;
-  line-height: 30px;
-  text-align: center;
+  padding: 0.3em;
   text-decoration: none;
-  width: 30px;
-  height: 30px;
 }
 
 

@@ -2,12 +2,10 @@ define(
 ['../pubsub', 'mustache', 'then-request'],
 function(events, mustache, request) {
 
-  var templateData = {
-    buttons: [
-      { value: 'new', symbol: '+' },
-      { value: 'close', symbol: 'x' }
-    ]
-  };
+  var buttons = [
+      { value: 'new', symbol: 'Add' },
+      { value: 'close', symbol: 'Close' }
+  ];
   var template;
   var pos = { x: 0, y: 0 };
 
@@ -39,7 +37,7 @@ function(events, mustache, request) {
 
   //functions
   function render() {
-    $menu.innerHTML = mustache.render(template, templateData);
+    $menu.innerHTML = mustache.render(template, { buttons });
   }
 
   function openMenu(newPos) {
