@@ -1,4 +1,4 @@
-define(['./pubsub.js'], function (events) {
+define(['./pubsub.js', 'draggable'], function (events, Draggable) {
   var nodeIndex = 0;
 
   var Node = function(gameData, editData) {
@@ -17,6 +17,7 @@ define(['./pubsub.js'], function (events) {
 
     this.elem = document.createElement('div');
     this.elem.className = 'node';
+    this.drag = new Draggable(this.elem);
 
     var $p = document.createElement('p');
     var $a = document.createElement('a');

@@ -37,7 +37,6 @@ define(function(require) {
     var editNode = nodes[data.editData.index];
     editNode.gameData = data.gameData;
     editNode.editData = data.editData;
-    console.log(nodes);
   });
 
   events.on('edit', function(data) {
@@ -49,21 +48,3 @@ define(function(require) {
   });
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

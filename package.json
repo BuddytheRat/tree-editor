@@ -16,6 +16,7 @@
     "webpack": "^1.13.2"
   },
   "dependencies": {
+    "draggable": "^4.0.4",
     "mustache": "^2.2.1"
   }
 }
