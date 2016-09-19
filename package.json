@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "draggable": "^4.0.4",
-    "mustache": "^2.2.1"
+    "mustache": "^2.2.1",
+    "then-request": "^2.2.0"
   }
 }

@@ -1,9 +1,9 @@
 define(function(require) {
-  var events = require('./modules/pubsub.js');
-  var Node = require('./modules/node.js');
-  require('./modules/editor.js');
-  require('./modules/nodemenu.js');
-  require('./modules/nodemanager.js');
+  var events = require('./modules/pubsub');
+  var Node = require('./modules/node');
+  require('./modules/editor');
+  require('./modules/contextmenu/contextmenu');
+  require('./modules/nodemanager');
 
   //cache DOM
   var $newLink = document.getElementById('new-link');

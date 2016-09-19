@@ -35,9 +35,32 @@
 }
 
 #context-menu {
-  border: 1px solid black;
   display: none;
   position: absolute;
-  height: 70px;
-  width: 100px;
 }
+
+#context-menu ul {
+    list-style: none;
+}
+
+#context-menu li a {
+  background: #bbe;
+  border-radius: 100%;
+  color: #000;
+  display: block;
+  float: left;
+  font-family: sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+}
+
+
+
+
+
+
