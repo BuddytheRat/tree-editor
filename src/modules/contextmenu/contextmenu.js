@@ -30,12 +30,12 @@ function(events, mustache, request) {
   //add event listeners
   $div.addEventListener('contextmenu', function(e) {
     e.preventDefault();
-    events.emit('openNodeMenu', {
+    events.emit('contextmenu.open', {
       x: e.clientX,
       y: e.clientY
     });
   });
-  events.on('openNodeMenu', openMenu);
+  events.on('contextmenu.open', openMenu);
 
   //functions
   function render() {
