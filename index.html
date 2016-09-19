@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tree Edit Practice</title>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <h1>Tree Editor</h1>
+    <a href="#" id="new-link">New</a>
+    <div id="editor-container">
+      <form id="editor">
+        <input type="hidden" name="index">
+        <label for="name">Name:</label>
+        <input type="textfield" name="name">
+        <label for="title">Title:</label>
+        <input type="textfield" name="title">
+        <label for="description">Description:</label>
+        <textarea name="description"></textarea>
+        <input type="submit" name="save" value="Save">
+      </form>
+    </div>
+    <div id="node-container"></div>
+    <script src="app/bundle.js" charset="utf-8"></script>
+  </body>
+</html>

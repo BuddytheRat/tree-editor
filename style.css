@@ -1,0 +1,29 @@
+.node {
+  background: #ddf;
+  border: 1px solid black;
+  width: 80px;
+  height: 60px;
+}
+
+.node p {
+  margin: 0;
+  padding: 0;
+}
+
+#editor-container {
+  display: none;
+  background: #ddf;
+  padding: 1em;
+  position: absolute;
+  right: 20px;
+  width: 400px;
+}
+
+#editor label {
+  display: block;
+}
+
+#editor textarea {
+  width: 350px;
+  height: 20em;
+}
