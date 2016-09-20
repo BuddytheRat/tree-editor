@@ -19,6 +19,5 @@
 - Menu should auto-close when option is clicked.
 
 ## Pub/Sub
-- Add hierarchical event names.
-  - i.e. 'event.subevent' will trigger two events, itself, plus 'event' by
-  itself.
+- ~~Add hierarchical event names.~~
+- ~~Asterisks should serve as a wildcard when subscribing/unsubscribing to events.~~

@@ -11,36 +11,51 @@ define([], function() {
     return res;
   }
 
+  function _getRegExp(eventName) {
+    var nested = eventName.split('.');
+    nested.forEach(function (eventName, i) {
+      if (eventName == '*') {
+        nested[i] = '.+';
+      }
+    });
+    return new RegExp('^' + nested.join('\.') + '$');
+  }
   //public
   function on(eventName, fn) {
-    this.events[eventName] = this.events[eventName] || [];
-    this.events[eventName].push(fn);
-  },
+    events[eventName] = events[eventName] || [];
+    events[eventName].push(fn);
+  }
+
   function off(eventName, fn) {
-    if(this.events[eventName]) {
-      for (var i = 0; i < this.events[eventName].length; i++) {
-        if (this.events[eventName][i] === fn) {
-          this.events[eventName].splice(i, 1);
+    if(events[eventName]) {
+      for (var i = 0; i < events[eventName].length; i++) {
+        if (events[eventName][i] === fn) {
+          events[eventName].splice(i, 1);
           break;
         }
       }
     }
-  },
+  }
+
   function emit(eventName, data) {
-    var nested = getNestedEvents(eventName);
+    var nested = _getNestedEvents(eventName);
     nested.forEach(function(eventName) {
-      if (this.events[eventName]) {
-        this.events[eventName].forEach(function(fn) {
-          fn(data);
-        });
+      for (var name in events) {
+        var reg = _getRegExp(name);
+        if (reg.test(eventName)) {
+          events[name].forEach(function(fn) {
+            fn(data);
+          });
+        }
       }
     }.bind(this));
-  },
+  }
+
   function getEventString() {
     var args = Array.prototype.slice.call(arguments);
     return args.join('.');
   }
-}
+
   return {
     on,
     off,
