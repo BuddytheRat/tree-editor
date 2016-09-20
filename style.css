@@ -15,6 +15,7 @@ h1 {
 }
 
 .node {
+  color: #377;
   background: #5bf;
   border: 1px solid black;
   height: 80px;
