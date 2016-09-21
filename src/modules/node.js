@@ -25,7 +25,11 @@ function (events, Draggable) {
     $p.textContent = this.gameData.name;
     this.elem.appendChild($p);
 
-    this.drag = new Draggable(this.elem);
+    this.drag = new Draggable(this.elem, {
+      onDragEnd: function (elem, x, y, e) {
+        dragEnd(x, y);
+      }
+    });
 
     //Methods
     this.setPos = function(pos) {
@@ -33,6 +37,12 @@ function (events, Draggable) {
       this.editData.y = pos.y;
       this.drag.set(pos.x, pos.y);
     }
+
+    var dragEnd = function(x, y) {
+      this.editData.x = x;
+      this.editData.y = y;
+      console.log(this.editData);
+    }.bind(this);
   }
 
 

@@ -1,8 +1,11 @@
 # ToDo
 
+## Bugs
++ Editor doesn't save.
+
 ## Node UI
 + ~~Nodes should be draggable.~~
-+ Save X and Y to editData when node is dropped.
++ ~~Save X and Y to editData when node is dropped.~~
 + Link nodes to each other.
   + Node object should list link objects which contain pointers to other node
   objects.
@@ -16,7 +19,7 @@
 ## Context menu
 + ~~Add functionality to context menu buttons.~~
 + Menu should auto-close when mouse gets a certain distance.
-+ Menu should auto-close when option is clicked.
++ ~~Menu should auto-close when option is clicked.~~
 
 ## Pub/Sub
 + ~~Add hierarchical event names.~~
