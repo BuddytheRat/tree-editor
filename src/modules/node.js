@@ -1,9 +1,7 @@
-define(['./pubsub.js', 'draggable', './cxm/cxm'], function (events, Draggable, cxm) {
+define(['./pubsub.js', 'draggable'],
+function (events, Draggable) {
   var nodeIndex = 0;
-  //Create Context Menu
-  cxm.addMenu('node', [
-    { id: 'edit', symbol: 'Edit' }
-  ]);
+
 
   var Node = function(gameData, editData) {
     this.gameData = gameData || {
@@ -19,23 +17,17 @@ define(['./pubsub.js', 'draggable', './cxm/cxm'], function (events, Draggable, c
       y: 0
     }
 
+    //Setup DOM Element
     this.elem = document.createElement('div');
     this.elem.className = 'node';
-    this.drag = new Draggable(this.elem);
-    cxm.attach('node', this.elem, { index: this.editData.index });
 
     var $p = document.createElement('p');
     $p.textContent = this.gameData.name;
-
-    // $a.addEventListener('click', function() {
-    //   events.emit('edit', {
-    //     gameData: this.gameData,
-    //     editData: this.editData
-    //   });
-    // }.bind(this));
-
     this.elem.appendChild($p);
 
+    this.drag = new Draggable(this.elem);
+
+    //Methods
     this.setPos = function(pos) {
       this.editData.x = pos.x;
       this.editData.y = pos.y;

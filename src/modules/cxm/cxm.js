@@ -7,18 +7,20 @@ function(events, mustache, request) {
   pos = { x: 0, y: 0 };
   menus = {};
 
-  //load template
-  request('GET', __dirname + '/template.mustache.html')
-  .then(function (data) {
-    template = data.body;
-    events.emit(prefix + '.loaded');
-  })
-  .catch(function (err) {
-    console.log(err);
-  });
+  _loadTemplate();
 
-  //functions
-  function addMenuEventListeners(id, data) {
+  //load template
+  function _loadTemplate() {
+    return request('GET', __dirname + '/template.mustache.html')
+    .then(function (data) {
+      template = data.body;
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
+  }
+
+  function _addMenuEventListeners(id, data) {
     $buttons = $menu.getElementsByTagName('a');
     menus[id].forEach(function (option, index) {
       var $b = $buttons[index];
@@ -29,7 +31,7 @@ function(events, mustache, request) {
     });
   }
 
-  function render(id) {
+  function _render(id) {
     if ($menu) { $menu.parentNode.removeChild($menu) }
     $menu = document.createElement('div');
     $menu.id = prefix;
@@ -38,8 +40,8 @@ function(events, mustache, request) {
   }
 
   function openMenu(menu, data) {
-    render(menu);
-    addMenuEventListeners(menu, data);
+    _render(menu);
+    _addMenuEventListeners(menu, data);
     $menu.style.display = 'block';
     $menu.style.left = data.pos.x + "px";
     $menu.style.top = data.pos.y + "px";
@@ -82,7 +84,7 @@ function(events, mustache, request) {
     addOption,
     attach,
     closeMenu
-  }
+  };
 });
 
 

@@ -1,6 +1,7 @@
 define([], function() {
   //private
   var events = {}
+  var debug = false;
 
   function _getNestedEvents(eventName) {
     var res = [];
@@ -24,6 +25,7 @@ define([], function() {
   function on(eventName, fn) {
     events[eventName] = events[eventName] || [];
     events[eventName].push(fn);
+    if (debug) console.log('Subscribed: ', eventName);
   }
 
   function off(eventName, fn) {
@@ -38,6 +40,7 @@ define([], function() {
   }
 
   function emit(eventName, data) {
+    if (debug) console.log('Emitted: ', eventName);
     var nested = _getNestedEvents(eventName);
     nested.forEach(function(eventName) {
       for (var name in events) {

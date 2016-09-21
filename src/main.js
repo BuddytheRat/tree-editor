@@ -1,7 +1,13 @@
-define(function(require) {
-  var events = require('./modules/pubsub');
-  var Node = require('./modules/node');
-  require('./modules/editor');
-  require('./modules/cxm/cxm');
-  require('./modules/nodemanager');
-});
+define(
+  [
+    './modules/pubsub',
+    './modules/node',
+    './modules/nodemanager',
+    './modules/cxm/cxm',
+    './modules/cxm/menus',
+    './modules/editor'
+  ],
+  function () {
+
+  }
+);
