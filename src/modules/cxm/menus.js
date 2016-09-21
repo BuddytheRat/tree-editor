@@ -17,4 +17,8 @@ function (cxm, events) {
   events.on('node.new', function(data) {
     cxm.attach('node', data.elem, { index: data.index });
   });
+
+  events.on('cxm.*.action', function() {
+    cxm.closeMenu();
+  })
 });
